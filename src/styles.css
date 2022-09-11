@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Flex:opsz,wght@8..144,100&display=swap');
+body{
+font-family: 'Kdam Thmor Pro', sans-serif!important;
+font-family: 'Roboto Flex', sans-serif!important;
+background-color: blanchedalmond;
+/*background-color: blanchedalmond;*/
+}

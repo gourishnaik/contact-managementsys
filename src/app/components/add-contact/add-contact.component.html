@@ -1,0 +1,68 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <p class="h3 fw-bold text-danger">
+                Add contact
+            </p>
+            <p class="fst-italic">Lorazepam, sold under the brand name Ativan among others, is a benzodiazepine
+                medication. It is used to treat anxiety disorders, trouble sleeping, severe agitation, active seizures
+                including status epilepticus, alcohol withdrawal, and chemotherapy-induced nausea and vomiting.</p>
+        </div>
+    </div>
+</div>
+
+<!--loading spinner-->
+<div *ngIf="loading"> 
+    <app-spinner> </app-spinner>
+    </div>
+    
+<!---- container  -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form (submit)="createsubmit()">
+                <div class="mb-2">
+                    <input required="true"  type="text"[(ngModel)]="contact.name"name="name" class="form-control" placeholder="name">
+                </div>
+
+                <div class="mb-2">
+                    <input required="true" type="text"[(ngModel)]="contact.photo" name="photo" class="form-control" placeholder="photo url">
+                </div>
+
+                <div class="mb-2">
+                    <input required="true" type="text"[(ngModel)]="contact.email" name="email" class="form-control" placeholder="email">
+                </div>
+
+                <div class="mb-2">
+                    <input required="true" type="text"[(ngModel)]="contact.mobile" name="mobile" class="form-control" placeholder="mobile number">
+                </div>
+
+                <div class="mb-2">
+                    <input required="true" type="text"[(ngModel)]="contact.company" name="company" class="form-control" placeholder="company">
+                </div>
+
+                <div class="mb-2">
+                    <input required="true" type="text"[(ngModel)]="contact.tittle" name="tittle" class="form-control" placeholder="Title">
+                </div>
+
+                <div class="mb-2">
+                    <select required="true" [(ngModel)]="contact.groupid" name="groupid"placeholder="select a group" class="form-control">
+                        <option value="">select a group </option>
+                        <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
+                    </select>
+                </div>
+
+                <div class="mb-4 mt-2">
+                    <input class="btn btn-danger" type="submit" value="Create">
+                 <a class="btn btn-dark ms-2"  routerLink="/">close</a> <!--ms-2 space between close and submit    -->
+                </div>
+
+
+            </form>
+        </div>
+    <div class="col-sm-4">
+        <img alt=""class="contact-img" [src]="contact.photo" >
+    </div>
+    </div>
+</div>

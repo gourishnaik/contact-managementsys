@@ -1,0 +1,15 @@
+.contact-img{
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+
+@media screen and (max-width:767px) {
+  
+    .contact-img{
+            width: 93px;
+            border-radius: 50%;
+            margin-left: 103px;       
+    }
+}
